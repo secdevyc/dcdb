@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <% include ./partials/head.ejs %>
+  </head>
+  <body>
+    <div class="container" id="showContainer">
+      <div class="showHeader">
+        <h1><%=coupon.makerName%></h1>
+      </div>
+      <div class="showBody">
+        <p>item: <%=coupon.itemName%></p>
+        <p>link for coupon: <%=coupon.link%></p>
+        <p>discount amount: <%=coupon.discountAmount%></p>
+        <p>expires on: <%=coupon.expirationDate%></p>
+        <p>
+          <%if(coupon.storeCoupon == true) { %>
+              this is a STORE COUPON.
+          <% } else { %>
+              this is a MANUFACTURERS COUPON, use it anywhere!
+          <% } %>
+        </p>
+        <p>Notes: <%=coupon.notes%></p>
+      </div>
+      <div class="showButtons">
+        <a class="waves-effect waves-light btn-small white-text light-blue darken-2" href="/dcdb/<%=coupon.id%>/edit">edit</a>
+        <form class="" action="/dcdb/<%=coupon.id%>?_method=DELETE" method="POST">
+          <input type="submit" name="" value="delete"/>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

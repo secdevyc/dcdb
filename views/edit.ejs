@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <% include ./partials/head.ejs %>
+  </head>
+  <body>
+    <div class="container">
+      <div class="" id="editHeader">
+        <h1>EDIT PAGE</h1>
+      </div>
+      <form class="" action="/dcdb/<%=coupon.id%>?_method=PUT" method="POST">
+        <label>
+          <input type="checkbox"
+                  name="storeCoupon"
+                  <%if(coupon.storeCoupon === true) { %>
+                      checked
+                  <% } %>
+                  />
+          <span>Is it a store coupon?</span>
+        </label><br />
+        Company: <input type="text" name="makerName" value="<%=coupon.makerName%>"/>
+        Item: <input type="text" name="itemName" value="<%=coupon.itemName%>"/>
+        Link: <input type="text" name="link" value="<%=coupon.link%>"/>
+        Discount amount: <input type="text" name="discountAmount" value="<%=coupon.discountAmount%>"/>
+        Expires on: <input type="text" name="expirationDate" value="<%=coupon.expirationDate%>"/>
+        Notes: <input type="text" name="notes" value="<%=coupon.notes%>"/>
+        <input type="submit" name="" value="update"/>
+      </form>
+    </div>
+  </body>
+</html>
