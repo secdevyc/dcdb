@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <% include ./partials/head.ejs %>
+  </head>
+  <body>
+    <div class="container" id="new">
+      <h1 class="showh1">NEW COUPON</h1>
+        <form action="/dcdb" method="POST">
+          <fieldset>
+            <label>
+              <input type="checkbox" name="storeCoupon"/>
+              <span>Is it a store coupon?</span>
+            </label><br />
+            <legend>Coupon Info</legend>
+            Provider: <input type="text" name="makerName" value=""/>
+            Item <input type="text" name="itemName" value=""/>
+          </fieldset>
+          <fieldset>
+            <legend>Coupon Link</legend>
+            <input type="text" name="link" value=""/>
+          </fieldset>
+          <fieldset class="" id="Discount Info">
+            <legend>Discount Info</legend>
+            <input type="text" name="discountAmount" value="amount" id="price"/>
+            <input type="text" name="expirationDate" value="expires" id="qty"/>
+          </fieldset>
+          <input type="submit" name="" value="add new coupon" class="btn btn-danger"/>
+        </form>
+      </div>
+  </body>
+</html>
