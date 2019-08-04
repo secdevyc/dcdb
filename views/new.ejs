@@ -23,8 +23,29 @@
           <fieldset class="" id="Discount Info">
             <legend>Discount Info</legend>
             <input type="text" name="discountAmount" value="amount" id="price"/>
-            <input type="text" name="expirationDate" value="expires" id="qty"/>
+            <!-- <input type="text" name="expirationDate" value="expires" id="qty"/> -->
+            <!-- <label>Expiration Date:</label> -->
+              <label for="">Expiration Date:</label>
+              <select class="browser-default" name="month">
+                  <option value="" disabled selected>Month</option>
+                <% for (let i = 1; i <= 12; i++) { %>
+                  <option value="<%=i%>"><%=i%></option>
+                <% } %>
+              </select>
+              <select class="browser-default" name="day" value="day">
+                <option value="" disabled selected>Day</option>
+                <% for (let i = 1; i <= 31; i++) { %>
+                  <option value="<%=i%>"><%=i%></option>
+                <% } %>
+              </select>
+              <select class="browser-default" name="year">
+                <option value="" disabled selected>Year</option>
+                <% for (let i = 2019; i <= 2022; i++) { %>
+                  <option value="<%=i%>"><%=i%></option>
+                <% } %>
+              </select>
           </fieldset>
+
           <input type="submit" name="" value="add new coupon" class="btn btn-danger"/>
         </form>
       </div>
