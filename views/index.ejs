@@ -6,35 +6,10 @@
   <body>
     <div class="col s10 m10 l10" id="header">
       <div id='indexHeader'>Personal Discount Database</div>
-      <a class="waves-effect btn-small black-text pink lighten-5 " href="/dcdb/newcoupon" id="newlink">enter new d/c</a>
+      <a class="waves-effect btn-small black-text pink lighten-5 newlink" href="/dcdb/newcoupon">enter new d/c</a>
+      <a class="waves-effect btn-small black-text pink lighten-5 newlink" href="/dcdb/list">list view</a>
     </div>
     <div class="container" id="indexContainer">
-      <!-- <table>
-        <thead>
-          <tr>
-            <th></th>
-            <th>Item</th>
-            <th>Company</th>
-            <th>exp date</th>
-            <th>Details</th>
-          </tr>
-        </thead>
-        <tbody>
-        <% for(let i = 0; i < coupons.length; i++) { %>
-          <tr>
-            <th>
-              <form class="" action="/dcdb/<%=coupons[i].id%>?_method=DELETE" method="POST">
-                <input type="submit" name="" value="delete"/>
-              </form>
-            </th>
-            <th><%= coupons[i].itemName %></th>
-            <th>by <%= coupons[i].makerName %></th>
-            <th><%= coupons[i].expirationDate %></th>
-            <th><a href="/dcdb/<%= coupons[i].id %>" class="waves-effect waves-light btn-small white-text light-blue darken-2">details</a></th>
-          </tr>
-        <% } %>
-        </tbody>
-      </table> -->
       <div class="row">
       <% for(let i = 0; i < coupons.length; i++) { %>
         <div class="col s12 m6 l4">

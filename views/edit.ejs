@@ -5,35 +5,10 @@
   </head>
   <body id="editbody">
     <div class="container" id="editcontainer">
-      <!-- <div class="" id="editHeader">
-        <h1>EDIT</h1>
-        <h1>COUPON</h1>
-      </div>
-      <form class="" action="/dcdb/<%=coupon.id%>?_method=PUT" method="POST" id="editbody">
-        <label class="black-text" id="storecoupon">
-          <input type="checkbox"
-                  name="storeCoupon"
-                  <%if(coupon.storeCoupon === true) { %>
-                      checked
-                  <% } %>
-                  />
-          <span>Is it a store coupon?</span>
-        </label><br />
-        Coupon Provider: <input type="text" name="makerName" value="<%=coupon.makerName%>"/>
-        Item: <input type="text" name="itemName" value="<%=coupon.itemName%>"/>
-        Link: <input type="text" name="link" value="<%=coupon.link%>"/>
-        Discount amount: <input type="text" name="discountAmount" value="<%=coupon.discountAmount%>"/>
-        Expires on: <input type="text" name="expirationDate" value="<%=coupon.expirationDate%>"/>
-        tags: <input type="text" name="tags" value="<%=coupon.tags%>"/>
-        <input class="grey lighten-2" type="submit" name="" value="update" id="editsubmit"/>
-      </form>
-    </div>
-    <div class="col s10 m10 l10" id="footer">
-      <a>home|</a><a> about|</a><a href="">contact</a> -->
       <div class="editsidebar"></div>
-      <div id="new">
-        <a href="/dcdb">back</a>
-        <h1 class="showh1">EDIT COUPON</h1>
+      <div id="edit">
+        <a href="/dcdb/<%=coupon.id%>">back</a>
+        <h2 class="showh2">EDIT COUPON</h2>
         <form action="/dcdb/<%=coupon.id%>?_method=PUT" method="POST">
           <fieldset>
             <label class="black-text" id="storecoupon">
@@ -57,29 +32,6 @@
             <legend>Discount Info</legend>
             <input type="text" name="discountAmount" value="<%=coupon.discountAmount%>" id="price"/>
             Expires on: <input type="text" name="expirationDate" value="<%=coupon.expirationDate%>"/>
-            <!-- <input type="text" name="expirationDate" value="expires" id="qty"/> -->
-            <!-- <label>Expiration Date:</label> -->
-              <!-- <label for="">Expiration Date:</label> -->
-              <!-- <div class="select">
-              <select class="browser-default" name="month">
-                  <option value="" disabled selected>Month</option>
-                <% for (let i = 1; i <= 12; i++) { %>
-                  <option value="<%=i%>"><%=i%></option>
-                <% } %>
-              </select>
-              <select class="browser-default" name="day" value="day">
-                <option value="" disabled selected>Day</option>
-                <% for (let i = 1; i <= 31; i++) { %>
-                  <option value="<%=i%>"><%=i%></option>
-                <% } %>
-              </select>
-              <select class="browser-default" name="year">
-                <option value="" disabled selected>Year</option>
-                <% for (let i = 2019; i <= 2022; i++) { %>
-                  <option value="<%=i%>"><%=i%></option>
-                <% } %>
-              </select>
-              </div> -->
           </fieldset>
           <fieldset>
             <legend>Tags</legend>
@@ -90,7 +42,9 @@
         </div>
       </div>
       <div class="col s10 m10 l10" id="footer">
-        <a>home|</a><a> about|</a><a href="">contact</a>
-    </div>
+        <img src="images/Facebook.png" alt="" style="width:30px; height:30px">
+        <img src="./images/Pinterest.png" alt="" style="width:30px; height:30px">
+        <img src="./images/Twitter.png" alt="" style="width:30px; height:30px">
+      </div>
   </body>
 </html>

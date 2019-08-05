@@ -20,6 +20,11 @@ router.get('/', (req, res) => {
     res.render('index.ejs', {coupons: coupons})
   })
 })
+router.get('/list', (req, res) => {
+  Coupon.find({}, (err, coupons) => {
+    res.render('indexlist.ejs', {coupons: coupons})
+  })
+})
 /////// DELETE ROUTE //////////////////
 router.delete('/:id', (req, res) => {
   Coupon.findByIdAndRemove(req.params.id, (err, deletedCoupon) => {
