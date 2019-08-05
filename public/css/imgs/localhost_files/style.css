@@ -11,6 +11,16 @@ body {
 }
 #header {
   text-align: center;
+  /* width: 89%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 12vw;
+  background: url('./imgs/indexHeader.jpg');
+  background-size: cover;
+  background-position: center;*/
+  /* background-color: rgb(182,189,195, 0.6); */
 }
 #indexHeader {
   font-size: 60px;
@@ -22,31 +32,31 @@ body {
   border: 8px;
   border-style: dotted;
   border-color: black;
-  background-color: rgb(252,228,236, 0.8);
+  background-color: rgb(252,228,236, 0.7);
 }
 .card a {
   font-size: 10px;
   text-align: center;
 }
-.cardcontent {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  padding: 8px;
-  overflow-y: auto;
-}
 .amount {
   font-family: 'Lobster', cursive;
 }
-.itemname, .makername, .expdate {
+.itemname {
   font-family: 'Barlow Condensed', sans-serif;
 }
-#footer {
-text-align: center;
-padding: 1em;
+.makername {
+  padding: 0;
 }
-#footer img {
-  margin: 1em;
+#footer {
+/* background-color: rgb(182,189,195, 0.6);
+display: flex;
+justify-content: center;
+width: 89%;
+margin: 0 auto;
+
+height: 10vw; */
+text-align: center;
+padding: 2em;
 }
 /* ============ SHOW PAGE ============= */
 #showContainer {

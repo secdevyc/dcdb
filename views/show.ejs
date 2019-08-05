@@ -14,7 +14,7 @@
         <div class="showBody">
           <p>item: <%=coupon.itemName%></p>
           <p>link for coupon:</p><a href="<%=coupon.link%>">Go to coupon website</a>
-          <p>discount amount: <%=coupon.discountAmount%></p>
+          <p class="amount">discount amount: <%=coupon.discountAmount%></p>
           <p>expires on: <%=coupon.expirationDate%></p>
           <p>
             <%if(coupon.storeCoupon == true) { %>

@@ -39,14 +39,14 @@
       <% for(let i = 0; i < coupons.length; i++) { %>
         <div class="col s12 m6 l4">
           <div class="card">
-            <div class="card-content">
-              <span class="card-title red-text"><%=coupons[i].discountAmount%></span>
+            <div class="cardcontent">
+              <span class="card-title red-text amount"><%=coupons[i].discountAmount%></span>
               <!-- <div class="card-action"> -->
                 <a href="/dcdb/<%= coupons[i].id %>" class="btn-floating halfway-fab waves-effect waves-light red" id="fab">details</a>
               <!-- </div> -->
-              <span class="card-title">on <%=coupons[i].itemName%></span>
-              <span class="card-content blue-text">by <%=coupons[i].makerName%></span>
-              <p>use by <%= coupons[i].expirationDate %></p>
+              <span class="card-title itemname"><%=coupons[i].itemName%></span>
+              <span class="blue-text makername">by <%=coupons[i].makerName%></span>
+              <span class="expdate">use by <%= coupons[i].expirationDate %></span>
             </div>
             </div>
           </div>
@@ -54,7 +54,9 @@
         </div>
       </div>
       <div class="col s10 m10 l10" id="footer">
-        <a>home|</a><a> about|</a><a href="">contact</a>
+        <img src="./images/Facebook.png" alt="" style="width:30px; height:30px">
+        <img src="./images/Pinterest.png" alt="" style="width:30px; height:30px">
+        <img src="./images/Twitter.png" alt="" style="width:30px; height:30px">
       </div>
     </div>
   </body>
