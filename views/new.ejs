@@ -4,8 +4,11 @@
     <% include ./partials/head.ejs %>
   </head>
   <body>
-    <div class="container" id="new">
-      <h1 class="showh1">NEW COUPON</h1>
+    <div class="container" id="newContainer">
+      <div class="newsidebar"></div>
+      <div id="new">
+        <a href="/dcdb">back</a>
+        <h1 class="showh1">NEW COUPON</h1>
         <form action="/dcdb" method="POST">
           <fieldset>
             <label>
@@ -26,6 +29,7 @@
             <!-- <input type="text" name="expirationDate" value="expires" id="qty"/> -->
             <!-- <label>Expiration Date:</label> -->
               <label for="">Expiration Date:</label>
+              <div class="select">
               <select class="browser-default" name="month">
                   <option value="" disabled selected>Month</option>
                 <% for (let i = 1; i <= 12; i++) { %>
@@ -44,10 +48,18 @@
                   <option value="<%=i%>"><%=i%></option>
                 <% } %>
               </select>
+              </div>
           </fieldset>
-
-          <input type="submit" name="" value="add new coupon" class="btn btn-danger"/>
+          <fieldset>
+            <legend>Tags</legend>
+            <input type="text" name="tags" value=""/>
+          </fieldset>
+          <input type="submit" name="" value="add new coupon" class="btn btn-danger" id="newsubmit"/>
         </form>
+        </div>
+      </div>
+      <div class="col s10 m10 l10" id="footer">
+        <a>home|</a><a> about|</a><a href="">contact</a>
       </div>
   </body>
 </html>

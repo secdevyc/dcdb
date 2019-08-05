@@ -36,6 +36,7 @@ router.get('/:id/edit', (req, res) => {
 ////////////// DETAILS PAGE ////////////////
 router.get('/:id', (req, res) => {
   Coupon.findById(req.params.id, (err, foundCoupon) => {
+    console.log(foundCoupon);
     res.render('show.ejs',
                 {
                   coupon: foundCoupon,
@@ -50,12 +51,25 @@ router.put('/:id', (req, res) => {
   } else {
     req.body.storeCoupon = false;
   }
-  Coupon.findOneAndUpdate(req.params.id, req.body, (err, updatedCoupon) => {
+  Coupon.findByIdAndUpdate(req.params.id, req.body, (err, updatedCoupon) => {
+    console.log(updatedCoupon);
+    console.log(err);
+    console.log(req.body);
     res.redirect('/dcdb')
+    // res.send(req.body)
   })
 })
 ///////// POSTING NEW COUPON //////////////////
 router.post('/', (req, res) => {
+  if (req.body.month == undefined) {
+    req.body.month = 1
+  }
+  if (req.body.day == undefined) {
+    req.body.day = 1
+  }
+  if (req.body.year == undefined) {
+    req.body.year = 2020
+  }
   req.body.expirationDate = req.body.month + '/' + req.body.day + '/' + req.body.year
   if(!req.body.link){
     req.body.link = 'NO LINK'

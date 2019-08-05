@@ -6,7 +6,7 @@ module.exports = [
     discountAmount : "Free",
     expirationDate : "08/31/19",
     storeCoupon : true,
-    notes : "free",
+    tags : "free",
   },
   {
     makerName : "Walmart",
@@ -15,7 +15,7 @@ module.exports = [
     discountAmount : "$1.00",
     expirationDate : "08/31/19",
     storeCoupon : true,
-    notes : "pizza",
+    tags : "pizza",
   },
   {
     makerName : "Clorox",
@@ -24,7 +24,7 @@ module.exports = [
     discountAmount : "$5.00",
     expirationDate : "08/31/19",
     storeCoupon : true,
-    notes : "household",
+    tags : "household",
   },
   {
     makerName : "Giordanos",
@@ -33,7 +33,7 @@ module.exports = [
     discountAmount : "$1.00 on TWO",
     expirationDate : "08/31/19",
     storeCoupon : true,
-    notes : "pizza",
+    tags : "pizza",
   },
   {
     makerName : "Pantene",
@@ -42,7 +42,7 @@ module.exports = [
     discountAmount : "$6.00",
     expirationDate : "08/31/19",
     storeCoupon : true,
-    notes : "bath",
+    tags : "bath",
   },
   {
     makerName : "Red Baron",
@@ -51,7 +51,7 @@ module.exports = [
     discountAmount : "$1.00",
     expirationDate : "08/31/19",
     storeCoupon : true,
-    notes : "pizza",
+    tags : "pizza",
   },
   {
     makerName : "McDonalds",
@@ -60,7 +60,7 @@ module.exports = [
     discountAmount : "BOGO",
     expirationDate : "08/31/19",
     storeCoupon : true,
-    notes : "fast-food",
+    tags : "fast-food",
   },
   {
     makerName : "Little Cesars",
@@ -69,7 +69,7 @@ module.exports = [
     discountAmount : "$1.00 on Lunch Box",
     expirationDate : "08/31/19",
     storeCoupon : true,
-    notes : "pizza",
+    tags : "pizza",
   },
   {
     makerName : "Rite Aid",
@@ -78,16 +78,16 @@ module.exports = [
     discountAmount : "$5.00 back when you spend $25",
     expirationDate : "08/31/19",
     storeCoupon : true,
-    notes : "pharmacy",
+    tags : "pharmacy",
   },
   {
     makerName : "Sarah Lee",
-    itemName : "pizza",
+    itemName : "pound cake",
     link : "none",
-    discountAmount : "Free pound cake",
+    discountAmount : "Free",
     expirationDate : "08/31/19",
     storeCoupon : true,
-    notes : "sweets",
+    tags : "free",
   },
   {
     makerName : "Talenti",
@@ -96,15 +96,15 @@ module.exports = [
     discountAmount : "$1.00 on any two",
     expirationDate : "08/31/19",
     storeCoupon : true,
-    notes : "sweets",
+    tags : "sweets",
   },
   {
-    makerName : "Ford",
-    itemName : "pizza",
+    makerName : "MB USA",
+    itemName : "SLK550",
     link : "none",
-    discountAmount : "$1000 off when you buy a mustang",
+    discountAmount : "$1000 off cash back",
     expirationDate : "08/31/19",
     storeCoupon : true,
-    notes : "cars",
+    tags : "cars",
   }
 ]

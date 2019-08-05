@@ -7,7 +7,7 @@ const couponSchema = new mongoose.Schema({
   discountAmount: String,
   expirationDate: String,
   storeCoupon: Boolean,
-  notes: String
+  tags: String
 });
 
 const Coupon = mongoose.model('Coupon', couponSchema);

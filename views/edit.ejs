@@ -3,13 +3,14 @@
   <head>
     <% include ./partials/head.ejs %>
   </head>
-  <body>
-    <div class="container">
-      <div class="" id="editHeader">
-        <h1>EDIT PAGE</h1>
+  <body id="editbody">
+    <div class="container" id="editcontainer">
+      <!-- <div class="" id="editHeader">
+        <h1>EDIT</h1>
+        <h1>COUPON</h1>
       </div>
-      <form class="" action="/dcdb/<%=coupon.id%>?_method=PUT" method="POST">
-        <label>
+      <form class="" action="/dcdb/<%=coupon.id%>?_method=PUT" method="POST" id="editbody">
+        <label class="black-text" id="storecoupon">
           <input type="checkbox"
                   name="storeCoupon"
                   <%if(coupon.storeCoupon === true) { %>
@@ -18,14 +19,78 @@
                   />
           <span>Is it a store coupon?</span>
         </label><br />
-        Company: <input type="text" name="makerName" value="<%=coupon.makerName%>"/>
+        Coupon Provider: <input type="text" name="makerName" value="<%=coupon.makerName%>"/>
         Item: <input type="text" name="itemName" value="<%=coupon.itemName%>"/>
         Link: <input type="text" name="link" value="<%=coupon.link%>"/>
         Discount amount: <input type="text" name="discountAmount" value="<%=coupon.discountAmount%>"/>
         Expires on: <input type="text" name="expirationDate" value="<%=coupon.expirationDate%>"/>
-        Notes: <input type="text" name="notes" value="<%=coupon.notes%>"/>
-        <input type="submit" name="" value="update"/>
+        tags: <input type="text" name="tags" value="<%=coupon.tags%>"/>
+        <input class="grey lighten-2" type="submit" name="" value="update" id="editsubmit"/>
       </form>
+    </div>
+    <div class="col s10 m10 l10" id="footer">
+      <a>home|</a><a> about|</a><a href="">contact</a> -->
+      <div class="editsidebar"></div>
+      <div id="new">
+        <a href="/dcdb">back</a>
+        <h1 class="showh1">EDIT COUPON</h1>
+        <form action="/dcdb/<%=coupon.id%>?_method=PUT" method="POST">
+          <fieldset>
+            <label class="black-text" id="storecoupon">
+              <input type="checkbox"
+                      name="storeCoupon"
+                      <%if(coupon.storeCoupon === true) { %>
+                          checked
+                      <% } %>
+                      />
+              <span>Is it a store coupon?</span>
+            </label><br />
+            <legend>Coupon Info</legend>
+            Provider: <input type="text" name="makerName" value="<%=coupon.makerName%>"/>
+            Item <input type="text" name="itemName" value="<%=coupon.itemName%>"/>
+          </fieldset>
+          <fieldset>
+            <legend>Coupon Link</legend>
+            <input type="text" name="link" value="<%=coupon.link%>"/>
+          </fieldset>
+          <fieldset class="" id="Discount Info">
+            <legend>Discount Info</legend>
+            <input type="text" name="discountAmount" value="<%=coupon.discountAmount%>" id="price"/>
+            Expires on: <input type="text" name="expirationDate" value="<%=coupon.expirationDate%>"/>
+            <!-- <input type="text" name="expirationDate" value="expires" id="qty"/> -->
+            <!-- <label>Expiration Date:</label> -->
+              <!-- <label for="">Expiration Date:</label> -->
+              <!-- <div class="select">
+              <select class="browser-default" name="month">
+                  <option value="" disabled selected>Month</option>
+                <% for (let i = 1; i <= 12; i++) { %>
+                  <option value="<%=i%>"><%=i%></option>
+                <% } %>
+              </select>
+              <select class="browser-default" name="day" value="day">
+                <option value="" disabled selected>Day</option>
+                <% for (let i = 1; i <= 31; i++) { %>
+                  <option value="<%=i%>"><%=i%></option>
+                <% } %>
+              </select>
+              <select class="browser-default" name="year">
+                <option value="" disabled selected>Year</option>
+                <% for (let i = 2019; i <= 2022; i++) { %>
+                  <option value="<%=i%>"><%=i%></option>
+                <% } %>
+              </select>
+              </div> -->
+          </fieldset>
+          <fieldset>
+            <legend>Tags</legend>
+            <input type="text" name="tags" value="<%=coupon.tags%>"/>
+          </fieldset>
+          <input type="submit" name="" value="add new coupon" class="btn btn-danger" id="editsubmit"/>
+        </form>
+        </div>
+      </div>
+      <div class="col s10 m10 l10" id="footer">
+        <a>home|</a><a> about|</a><a href="">contact</a>
     </div>
   </body>
 </html>
