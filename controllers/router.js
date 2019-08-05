@@ -21,8 +21,24 @@ router.get('/', (req, res) => {
   })
 })
 router.get('/list', (req, res) => {
-  Coupon.find({}, (err, coupons) => {
+  Coupon.find({}).collation({locale: "en" }).sort({itemName: 'asc'}).exec(function(err, coupons) {
     res.render('indexlist.ejs', {coupons: coupons})
+    // res.send(coupons)
+  })
+})
+router.get('/list/company', (req, res) => {
+  Coupon.find({}).collation({locale: "en" }).sort({makerName: 'asc'}).exec(function(err, coupons) {
+    res.render('listcompany.ejs', {coupons: coupons})
+    // console.log(coupons);
+    // res.send(coupons)
+  })
+})
+router.get('/list/date', (req, res) => {
+  Coupon.find({}).sort({expirationDate: 'asc'}).exec(function(err, coupons) {
+    console.log(coupons);
+    console.log(err);
+    res.render('listdate.ejs', {coupons: coupons})
+    // res.send(coupons)
   })
 })
 /////// DELETE ROUTE //////////////////

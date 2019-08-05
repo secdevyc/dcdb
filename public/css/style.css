@@ -46,6 +46,9 @@ table {
   background-color: rgb(252,228,236, 0.8);
   font-size: 20px
 }
+.deletebutton {
+  font-size: 10px;
+}
 #footer {
 text-align: center;
 padding: 1em;

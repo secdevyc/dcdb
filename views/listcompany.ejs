@@ -14,8 +14,8 @@
         <thead>
           <tr>
             <th></th>
-            <th>Item</th>
-            <th><a href="/dcdb/list/company">Company</a></th>
+            <th>Company</th>
+            <th><a href="/dcdb/list">Item</a></th>
             <th><a href="/dcdb/list/date">exp date</a></th>
             <th>Details</th>
           </tr>
@@ -28,8 +28,8 @@
                 <input  type="submit" name="" value="delete"/>
               </form>
             </th>
-            <th><%= coupons[i].itemName %></th>
             <th>by <%= coupons[i].makerName %></th>
+            <th><%= coupons[i].itemName %></th>
             <th><%= coupons[i].expirationDate %></th>
             <th><a href="/dcdb/<%= coupons[i].id %>" class="waves-effect waves-light btn-small white-text light-blue darken-2">details</a></th>
           </tr>
