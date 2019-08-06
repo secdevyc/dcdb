@@ -13,7 +13,12 @@
         </div>
         <div class="showBody">
           <p>item: <%=coupon.itemName%></p>
-          <p>link for coupon:</p><a href="<%=coupon.link%>">Go to coupon website</a>
+          <p>link for coupon:</p>
+            <% if (coupon.link == 'NO LINK') { %>
+              <p>'NO LINK'</p>
+            <% } else { %>
+              <a href="<%=coupon.link%>">Go to coupon website</a>
+            <% } %>
           <p class="amount">discount amount: <%=coupon.discountAmount%></p>
           <p>expires on: <%=coupon.expirationDate%></p>
           <p>
@@ -33,13 +38,13 @@
           <form class="waves-effect waves-light btn-small white-text pink lighten-4 editbutton" action="/dcdb/<%=coupon.id%>?_method=DELETE" method="POST">
             <input type="submit" name="edit" value="delete" class="pink lighten-4"/>
           </form>
+          <div class="col s10 m10 l10" id="showfooter">
+            <img src="./images/Facebook.png" alt="" style="width:30px; height:30px">
+            <img src="./images/Pinterest.png" alt="" style="width:30px; height:30px">
+            <img src="./images/Twitter.png" alt="" style="width:30px; height:30px">
+          </div>
         </div>
       </div>
-    </div>
-    <div class="col s10 m10 l10" id="footer">
-      <img src="./images/Facebook.png" alt="" style="width:30px; height:30px">
-      <img src="./images/Pinterest.png" alt="" style="width:30px; height:30px">
-      <img src="./images/Twitter.png" alt="" style="width:30px; height:30px">
     </div>
   </body>
 </html>

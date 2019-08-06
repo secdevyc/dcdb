@@ -1,12 +1,12 @@
 module.exports = [
   {
-    makerName : "Dollar Tree",
-    itemName : "Del Monte Fruit Refreshers",
-    link : "none",
-    discountAmount : "Free",
-    expirationDate : "08/31/19",
+    makerName : "GNC",
+    itemName : "vitamins and supplements",
+    link : "https://www.gnc.com/buy-one-get-one-half-off/vitamins-supplements-bogo/?utm_source=cj&utm_medium=affiliate&utm_campaign=afl_cj_b-evgn_pf-none_pb-none_pdc-none_lowf_cx-none_p-none_t-none_g-usnat_d-alla_aflp-4137499&utm_term=13782922_4137499_7278242&utm_content=aff-none&cjevent=daa8ea7db7da11e9801400430a240611",
+    discountAmount : "BOGO 50%",
+    expirationDate : "8/31/19",
     storeCoupon : true,
-    tags : "free",
+    tags : "health",
   },
   {
     makerName : "Walmart",

@@ -152,6 +152,39 @@ padding: 1em;
   border-radius: 10px 0 0 10px;
   background-position: center;
 }
+#health, #fitness {
+  width: 50%;
+  background: url('./imgs/health.jpg');
+  background-size: 600px 800px;
+  background-repeat: repeat;
+  border-radius: 10px 0 0 10px;
+  background-position: center;
+}
+#snacks {
+  width: 50%;
+  background: url('./imgs/snacks.jpeg');
+  background-size: 600px 800px;
+  background-repeat: repeat;
+  border-radius: 10px 0 0 10px;
+  background-position: center;
+}
+#baby {
+  width: 50%;
+  background: url('./imgs/baby.jpg');
+  background-size: 600px 800px;
+  background-repeat: repeat;
+  border-radius: 10px 0 0 10px;
+  background-position: center;
+}
+#skincare {
+  width: 50%;
+  background: url('./imgs/skincare.jpg');
+  background-size: 600px 800px;
+  background-repeat: repeat;
+  border-radius: 10px 0 0 10px;
+  background-position: center;
+}
+
 .details {
   text-align: center;
   width: 50%;
@@ -177,6 +210,9 @@ padding: 1em;
 .editbutton {
   font-size: 10px;
   margin: 1em;
+}
+#showfooter {
+  margin-top: 10em;
 }
 /* ///////// EDIT PAGE /////////// */
 #editbody {
