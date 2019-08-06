@@ -184,7 +184,14 @@ padding: 1em;
   border-radius: 10px 0 0 10px;
   background-position: center;
 }
-
+#pets, #pet, #cat, #dog {
+  width: 50%;
+  background: url('./imgs/pet1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 10px 0 0 10px;
+  background-position: center;
+}
 .details {
   text-align: center;
   width: 50%;
