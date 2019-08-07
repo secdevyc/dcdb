@@ -18,3 +18,4 @@ Future Implementations:
 1. UserID / PW authentication
 2. Use select/options tags for the coupon.tags
 3. Figure out how to make utilize the actual Date format, and change the coupon.date from a type: string to type: Date
+4. User customized images
