@@ -93,7 +93,7 @@ router.post('/', (req, res) => {
   }
   req.body.expirationDate = req.body.month + '/' + req.body.day + '/' + req.body.year
   if(!req.body.link){
-    req.body.link = 'NO LINK'
+    req.body.link = 'PAPER COUPON'
   } else {
     req.body.link = req.body.link
   }
