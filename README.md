@@ -9,7 +9,7 @@ User Story:
 4. User should be able to edit the coupon from the details view and update the coupon
 5. User should be to delete the coupon from the details view
 
-## This is a basic CRUD app that utilizes MongoDB and Node.js packages such as Express, Mongoose, EJS, and method-override. The styling was done using the Materialize framework plus some added customizations.
+* This is a basic CRUD app that utilizes MongoDB and Node.js packages such as Express, Mongoose, EJS, and method-override. The styling was done using the Materialize framework plus some added customizations.*
 
 This app is deployed on Heroku at: https://discount-database.herokuapp.com/dcdb/
 
