@@ -14,7 +14,7 @@
         <div class="showBody">
           <p>item: <%=coupon.itemName%></p>
           <p>link for coupon:</p>
-            <% if (coupon.link == 'PAPER COUPON') { %>
+            <% if (coupon.link === 'NO LINK') { %>
               <p>'PAPER COUPON'</p>
             <% } else { %>
               <a href="<%=coupon.link%>">Go to coupon website</a>

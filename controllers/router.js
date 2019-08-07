@@ -72,6 +72,11 @@ router.put('/:id', (req, res) => {
   } else {
     req.body.storeCoupon = false;
   }
+  if(!req.body.link){
+    req.body.link = 'NO LINK'
+  } else {
+    req.body.link = req.body.link
+  }
   Coupon.findByIdAndUpdate(req.params.id, req.body, (err, updatedCoupon) => {
     console.log(updatedCoupon);
     console.log(err);
@@ -93,7 +98,7 @@ router.post('/', (req, res) => {
   }
   req.body.expirationDate = req.body.month + '/' + req.body.day + '/' + req.body.year
   if(!req.body.link){
-    req.body.link = 'PAPER COUPON'
+    req.body.link = 'NO LINK'
   } else {
     req.body.link = req.body.link
   }
