@@ -8,7 +8,7 @@
       <div class="sidebar" id="<%=coupon.tags%>"></div>
       <div class="details">
         <div class="showHeader">
-          <a href="/dcdb">back</a>
+          <a href="/">back</a>
           <h3><%=coupon.makerName%></h3>
         </div>
         <div class="showBody">
@@ -31,11 +31,11 @@
           <p>tags: <%=coupon.tags%></p>
         </div>
         <div class="showButtons">
-          <form class="waves-effect waves-light btn-small white-text pink lighten-4 editbutton" action="/dcdb/<%=coupon.id%>/edit">
+          <form class="waves-effect waves-light btn-small white-text pink lighten-4 editbutton" action="/<%=coupon.id%>/edit">
             <input type="submit" name="edit" value="edit" class="pink lighten-4"/>
           </form>
-          <!-- <a class="waves-effect waves-light btn-small white-text pink lighten-4" href="/dcdb/<%=coupon.id%>/edit" id="editbutton">edit</a> -->
-          <form class="waves-effect waves-light btn-small white-text pink lighten-4 editbutton" action="/dcdb/<%=coupon.id%>?_method=DELETE" method="POST">
+          <!-- <a class="waves-effect waves-light btn-small white-text pink lighten-4" href="/<%=coupon.id%>/edit" id="editbutton">edit</a> -->
+          <form class="waves-effect waves-light btn-small white-text pink lighten-4 editbutton" action="/<%=coupon.id%>?_method=DELETE" method="POST">
             <input type="submit" name="edit" value="delete" class="pink lighten-4"/>
           </form>
           <div class="col s10 m10 l10" id="showfooter">

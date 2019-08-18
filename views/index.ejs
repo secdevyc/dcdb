@@ -6,8 +6,8 @@
   <body>
     <div class="col s10 m10 l10" id="header">
       <div id='indexHeader'>Personal Discount Database</div>
-      <a class="waves-effect btn-small black-text pink lighten-5 newlink" href="/dcdb/newcoupon">enter new d/c</a>
-      <a class="waves-effect btn-small black-text pink lighten-5 newlink" href="/dcdb/list">list view</a>
+      <a class="waves-effect btn-small black-text pink lighten-5 newlink" href="/newcoupon">enter new d/c</a>
+      <a class="waves-effect btn-small black-text pink lighten-5 newlink" href="/list">list view</a>
     </div>
     <div class="container" id="indexContainer">
       <div class="row">
@@ -17,7 +17,7 @@
             <div class="cardcontent">
               <span class="card-title red-text amount"><%=coupons[i].discountAmount%></span>
               <!-- <div class="card-action"> -->
-                <a href="/dcdb/<%= coupons[i].id %>" class="btn-floating halfway-fab waves-effect waves-light red" id="fab">details</a>
+                <a href="/<%= coupons[i].id %>" class="btn-floating halfway-fab waves-effect waves-light red" id="fab">details</a>
               <!-- </div> -->
               <span class="card-title itemname"><%=coupons[i].itemName%></span>
               <span class="blue-text makername">by <%=coupons[i].makerName%></span>

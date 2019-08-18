@@ -6,8 +6,8 @@
   <body>
     <div class="col s10 m10 l10" id="header">
       <div id='indexHeader'>Personal Discount Database</div>
-      <a class="waves-effect btn-small black-text pink lighten-5 newlink" href="/dcdb/newcoupon">enter new d/c</a>
-      <a class="waves-effect btn-small black-text pink lighten-5 newlink" href="/dcdb">list view</a>
+      <a class="waves-effect btn-small black-text pink lighten-5 newlink" href="/newcoupon">enter new d/c</a>
+      <a class="waves-effect btn-small black-text pink lighten-5 newlink" href="/">list view</a>
     </div>
     <div class="container" id="indexContainer">
     <table>
@@ -15,8 +15,8 @@
           <tr>
             <th></th>
             <th>exp date</th>
-            <th><a href="/dcdb/list">Item</a></th>
-            <th><a href="/dcdb/list/company">Company</a></th>
+            <th><a href="/list">Item</a></th>
+            <th><a href="/list/company">Company</a></th>
             <th>Details</th>
           </tr>
         </thead>
@@ -24,14 +24,14 @@
         <% for(let i = 0; i < coupons.length; i++) { %>
           <tr>
             <th>
-              <form class="waves-effect waves-light btn-small white-text pink darken-1 deletebutton" action="/dcdb/<%=coupons[i].id%>?_method=DELETE" method="POST">
+              <form class="waves-effect waves-light btn-small white-text pink darken-1 deletebutton" action="/<%=coupons[i].id%>?_method=DELETE" method="POST">
                 <input  type="submit" name="" value="delete"/>
               </form>
             </th>
             <th><%= coupons[i].expirationDate %></th>
             <th><%= coupons[i].itemName %></th>
             <th>by <%= coupons[i].makerName %></th>
-            <th><a href="/dcdb/<%= coupons[i].id %>" class="waves-effect waves-light btn-small white-text light-blue darken-2">details</a></th>
+            <th><a href="/<%= coupons[i].id %>" class="waves-effect waves-light btn-small white-text light-blue darken-2">details</a></th>
           </tr>
         <% } %>
         </tbody>

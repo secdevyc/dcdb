@@ -44,7 +44,7 @@ router.get('/list/date', (req, res) => {
 /////// DELETE ROUTE //////////////////
 router.delete('/:id', (req, res) => {
   Coupon.findByIdAndRemove(req.params.id, (err, deletedCoupon) => {
-    res.redirect('/dcdb')
+    res.redirect('/')
   })
 })
 
@@ -81,7 +81,7 @@ router.put('/:id', (req, res) => {
     console.log(updatedCoupon);
     console.log(err);
     console.log(req.body);
-    res.redirect('/dcdb')
+    res.redirect('/')
     // res.send(req.body)
   })
 })
@@ -109,7 +109,7 @@ router.post('/', (req, res) => {
   }
   Coupon.create(req.body, (err, newCoupon) => {
     console.log(req.body);
-    res.redirect('/dcdb')
+    res.redirect('/')
   })
 })
 

@@ -28,7 +28,7 @@ app.use(express.static('public'))
 app.use(express.json());
 ///////// CONTROLLERS //////////////
 const couponController = require('./controllers/router.js')
-app.use('/dcdb', couponController);
+app.use('/', couponController);
 /////// LISTENER /////////
 app.listen(PORT, () => {
   console.log('=======LISTENING========');
